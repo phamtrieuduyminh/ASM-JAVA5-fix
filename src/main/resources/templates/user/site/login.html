@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Index</title>
+
+
+    <!-- Favicons -->
+    <link th:href="@{/img/favicon.png}" rel="icon">
+    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i}" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/vendor/icofont/icofont.min.css}" rel="stylesheet">
+    <link th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+    <link th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+    <link th:href="@{/vendor/owl.carousel/assets/owl.carousel.min.css}" rel="stylesheet">
+    <link th:href="@{/vendor/venobox/venobox.css}" rel="stylesheet">
+    <link th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Vesperr - v2.0.0
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+
+
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href=""><span>Duy Minh JAVA</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header">Giới thiệu</a></li>
+                    <li><a href="#portfolio">Sản phẩm</a></li>
+                    <li><a href="#contact">Phản hồi</a></li>
+                    <li><a href="#about">Giỏ Hàng</a></li>
+                    <li class="get-started"><a th:href="@{/user/site/login}">Đăng nhập</a></li>
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+
+        </div>
+    </header>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Đăng Nhập</h2>
+            </div>
+
+            <div class="row align-content-center">
+                <div class="col-lg-8 mr-auto ml-auto col-md-12" data-aos="fade-up" data-aos-delay="300">
+                    <form th:action="@{/site/login}" method="POST" class="php-email-form" th:object="${user}">
+                        <div class="form-group">
+                            <input type="text" name="name" th:field="*{username}" class="form-control" id="name" placeholder="Tên của bạn" />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" th:field="*{password}" name="password" id="password" placeholder="Mật khẩu" />
+                            <div class="validate"></div>
+                        </div>
+                        <!-- <a th:href="@{user/site/registration}" style="border-radius: 40px;" class="btn btn-info">Đăng ký</a> -->
+                        <div class="text-center">
+                            <button class="btn btn-primary">Đăng nhập</button>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 text-lg-left text-center">
+
+                    <div class="credits">
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+                        Designed by Duy Minh
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/vendor/jquery.easing/jquery.easing.min.js}"></script>
+    <script th:src="@{/vendor/php-email-form/validate.js}"></script>
+    <script th:src="@{/vendor/waypoints/jquery.waypoints.min.js}"></script>
+    <script th:src="@{/vendor/counterup/counterup.min.js}"></script>
+    <script th:src="@{/vendor/owl.carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+    <script th:src="@{/vendor/venobox/venobox.min.js}"></script>
+    <script th:src="@{/vendor/aos/aos.js}"></script>
+
+
+    <!-- Template Main JS File -->
+    <script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{admin/dashboardLayout.html}">
+
+<head>
+
+</head>
+
+<body>
+
+
+    <section class="row" layout:fragment="content">
+        <div class="col">
+            <div class="card">
+                <h3 class="text-center">Danh Sách Tài Khoản</h3>
+                <div th:if="@{message != null}" class="alert alert-primary" role="alert">
+                    <i>[[${message}]]</i>
+                </div>
+                <div class="card-body">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Tài Khoản</th>
+                                <th scope="col">Mật Khẩu</th>
+                                <th scope="col">Họ Và Tên</th>
+                                <th scope="col">Admin</th>
+
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each=" account: ${accounts}">
+                                <th scope="row">[[${account.userId}]]</th>
+                                <td th:text="${account.username}"></td>
+                                <td th:text="${account.password}"></td>
+                                <td th:text="${account.fullname}"></td>
+                                <td th:text="${account.roles?'Người Dùng':'Quản Trị Viên'}"></td>
+                                <td>
+
+                                    <a th:href="@{'/admin/accounts/edit/' + ${account.userId}}" class="btn btn-primary p-2 m-1"><i class="fa fa-edit pr-1" >Sửa</i>
+                                        <a th:href="@{'/admin/accounts/delete/' + ${account.userId}}" class="btn btn-danger p-2  m-1"><i class="fa fa-recycle pr-1" >Xóa</i></a>
+
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="card-footer">
+
+
+                    <div class="float-right">
+                        <a class="btn btn-outline-primary" th:href="@{/admin/categories/add}">Thêm mới người dùng</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+</body>
+
+</html>

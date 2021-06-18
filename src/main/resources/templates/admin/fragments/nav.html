@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+</head>
+
+<body>
+    <div th:fragment="nav">
+        <nav class="navbar navbar-expand-sm navbar-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h1>Admin</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarID">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" th:href="@{/admin/categories/searchpaginated}">Quản lý Thể Loại</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{/admin/customers}">Quản Lý Khách Hàng</a>
+                        <a class=" nav-link active " aria-current="page " th:href="@{/admin/products}">Quản Lý Sản Phẩm</a>
+                        <a class=" nav-link active " aria-current="page " th:href="@{/admin/accounts}">Quản Lý Tài Khoản</a>
+                        <a class="nav-link active " aria-current="page " href="# ">Quán lý Đơn hàng</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</body>
+
+
+</html>
